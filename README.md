@@ -1,5 +1,5 @@
 # chirp-vision
-This is a AWS Lambda function built for the Chirp Birding bird species identification machine learning model.
+This is a Python AWS Lambda function built for the Chirp Birding bird species identification machine learning model.
 The function performs the following tasks:
 1. Client script calls an Amazon API Gateway API action and passes parameter values to function (image url in this case).
 2. Function downloads the image file from the url.
