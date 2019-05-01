@@ -1,8 +1,9 @@
 # chirp-vision
-This is a AWS Lambda function built for the Chirp Birding bird species identification model.
+This is a AWS Lambda function built for the Chirp Birding bird species identification machine learning model.
 The function performs the following tasks:
-1. Accepts an image url
-2. Downloads the image file from the url
-3. Passes the image to a SageMaker endpoint for inference
-4. Processes the json object returned by the SageMaker endpoint into a class and probability
-5. Return the class : probability result as a json object
+1. Client script calls an Amazon API Gateway API action and passes parameter values to function (image url in this case).
+2. Function downloads the image file from the url.
+3. Function  parses the value and sends it to the SageMaker model endpoint.
+4. The model performs the prediction and returns the predicted value back to the function.
+4. Function then parses the returned value into a class and probability.
+5. Function then sends the class:probability result back to API Gateway as a json object.
